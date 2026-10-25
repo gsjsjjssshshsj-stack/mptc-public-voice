@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Our Village Our Development - MPTC Public Voice Survey">
+  <title>మన గ్రామం – మన అభివృద్ధి</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">గ్రా</div>
+    <div>
+      <strong data-i18n="brand">మన గ్రామం – మన అభివృద్ధి</strong>
+      <small>MPTC Public Voice & Village Development Survey</small>
+    </div>
+  </div>
+
+  <button id="languageToggle" class="language-button">
+    English
+  </button>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <span class="eyebrow" data-i18n="eyebrow">
+      ప్రజల అభిప్రాయ సేకరణ
+    </span>
+
+    <h1 data-i18n="title">మన గ్రామం – మన అభివృద్ధి</h1>
+
+    <p data-i18n="subtitle">
+      మీ గ్రామంలోని సమస్యలు, అవసరాలు, అభివృద్ధి సూచనలను తెలియజేయండి.
+    </p>
+  </section>
+
+  <!-- INTRODUCTION -->
+
+  <section id="intro" class="panel">
+
+    <h2 data-i18n="introTitle">సర్వే సూచనలు</h2>
+
+    <ul>
+      <li data-i18n="intro1">
+        ఈ సర్వే గ్రామంలోని ప్రజా సదుపాయాలు మరియు అభివృద్ధి అవసరాలను తెలుసుకోవడానికి మాత్రమే.
+      </li>
+
+      <li data-i18n="intro2">
+        పాల్గొనడం పూర్తిగా స్వచ్ఛందం.
+      </li>
+
+      <li data-i18n="intro3">
+        పేరు, ఫోన్ నంబర్, ఇంటి నంబర్ లేదా ఓటు ఎంపిక అడగబడదు.
+      </li>
+
+      <li data-i18n="intro4">
+        వ్యక్తిగత వివరాలు లేదా ఇతరుల గుర్తింపు కనిపించే ఫోటోలు అప్‌లోడ్ చేయవద్దు.
+      </li>
+
+      <li data-i18n="intro5">
+        సమాధానాలను అధికారం కలిగిన నిర్వాహకులు గ్రామ అభివృద్ధి అవసరాలను అర్థం చేసుకోవడానికి పరిశీలిస్తారు.
+      </li>
+    </ul>
+
+    <p class="privacy-note" data-i18n="privacy">
+      గమనిక: వెబ్ హోస్టింగ్ మరియు సర్వే సేవలు కొన్ని సాంకేతిక సమాచారాన్ని ప్రాసెస్ చేయవచ్చు. సంపూర్ణ అనామకత్వానికి హామీ ఇవ్వలేము.
+    </p>
+
+    <button id="startButton" class="primary" data-i18n="start">
+      సర్వే ప్రారంభించండి
+    </button>
+
+  </section>
+
+  <!-- SURVEY -->
+
+  <section id="survey" class="panel hidden">
+
+    <div class="progress-head">
+      <span id="stepLabel"></span>
+      <span id="progressPercent"></span>
+    </div>
+
+    <div class="progress-track">
+      <div id="progressBar"></div>
+    </div>
+
+    <form id="surveyForm">
+
+      <!-- SECTION 1 -->
+
+      <div class="survey-step">
+
+        <h2 data-i18n="basicTitle">1. ప్రాథమిక సమాచారం</h2>
+
+        <label>
+          <span data-i18n="village">గ్రామం</span>
+
+          <select name="village">
+            <option value="">-- Select --</option>
+            <option>గ్రామం 1 / Village 1</option>
+            <option>గ్రామం 2 / Village 2</option>
+            <option>Other / ఇతర</option>
+          </select>
+        </label>
+
+        <label>
+          <span data-i18n="age">వయస్సు (ఐచ్ఛికం)</span>
+
+          <select name="ageGroup">
+            <option value="">-- Select --</option>
+            <option>Below 18</option>
+            <option>18–25</option>
+            <option>26–35</option>
+            <option>36–50</option>
+            <option>51–65</option>
+            <option>Above 65</option>
+          </select>
+        </label>
+
+        <label>
+          <span data-i18n="occupation">వృత్తి (ఐచ్ఛికం)</span>
+
+          <select name="occupation">
+            <option value="">-- Select --</option>
+            <option>Farmer / రైతు</option>
+            <option>Agricultural labour / వ్యవసాయ కూలీ</option>
+            <option>Student / విద్యార్థి</option>
+            <option>Private employee</option>
+            <option>Government employee</option>
+            <option>Business / వ్యాపారం</option>
+            <option>Homemaker / గృహిణి</option>
+            <option>Other / ఇతర</option>
+          </select>
+        </label>
+
+      </div>
+
+      <!-- SECTION 2 -->
+
+      <div class="survey-step hidden">
+
+        <h2 data-i18n="problemsTitle">2. గ్రామ సమస్యలు</h2>
+
+        <p class="hint" data-i18n="problemsHint">
+          మీ గ్రామంలో ఉన్న సమస్యలను ఎంచుకోండి.
+        </p>
+
+        <div class="choices">
+
+          <label><input type="checkbox" name="problems" value="Drinking water"> Drinking water / తాగునీరు</label>
+
+          <label><input type="checkbox" name="problems" value="Roads"> Roads / రోడ్లు</label>
+
+          <label><input type="checkbox" name="problems" value="Drainage"> Drainage / డ్రైనేజీ</label>
+
+          <label><input type="checkbox" name="problems" value="Street lights"> Street lights / వీధి దీపాలు</label>
+
+          <label><input type="checkbox" name="problems" value="Electricity"> Electricity / విద్యుత్</label>
+
+          <label><input type="checkbox" name="problems" value="Agriculture"> Agriculture / వ్యవసాయం</label>
+
+          <label><input type="checkbox" name="problems" value="Education"> Education / విద్య</label>
+
+          <label><input type="checkbox" name="problems" value="Healthcare"> Healthcare / వైద్యం</label>
+
+          <label><input type="checkbox" name="problems" value="Transport"> Transport / రవాణా</label>
+
+          <label><input type="checkbox" name="problems" value="Sanitation"> Sanitation / పారిశుధ్యం</label>
+
+          <label><input type="checkbox" name="problems" value="Employment"> Employment / ఉపాధి</label>
+
+        </div>
+
+        <label>
+          <span data-i18n="biggestProblem">అత్యంత ముఖ్యమైన సమస్య</span>
+          <textarea name="biggestProblem" rows="3"></textarea>
+        </label>
+
+        <label>
+          <span data-i18n="duration">ఈ సమస్య ఎంతకాలంగా ఉంది?</span>
+
+          <select name="duration">
+            <option value="">-- Select --</option>
+            <option>Less than 6 months</option>
+            <option>6 months–1 year</option>
+            <option>1–3 years</option>
+            <option>More than 3 years</option>
+            <option>Not sure</option>
+          </select>
+        </label>
+
+        <!-- PHOTO UPLOAD -->
+
+        <label>
+          <span data-i18n="photo">సమస్యకు సంబంధించిన ఫోటో (ఐచ్ఛికం)</span>
+
+          <input
+            id="problemPhotos"
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+            capture="environment"
+            multiple
+          >
+
+          <small data-i18n="photoHint">
+            గరిష్ఠంగా 3 ఫోటోలు; ఒక్కొక్కటి 5 MB వరకు.
+          </small>
+        </label>
+
+        <div id="photoPreview" class="photo-preview"></div>
+
+        <p class="privacy-note" data-i18n="photoPrivacy">
+          వ్యక్తులు, వాహన నంబర్లు లేదా వ్యక్తిగత పత్రాలు కనిపించే ఫోటోలు అప్‌లోడ్ చేయవద్దు.
+        </p>
+
+      </div>
+
+      <!-- SECTION 3 -->
+
+      <div class="survey-step hidden">
+
+        <h2 data-i18n="agriTitle">3. వ్యవసాయం మరియు రైతులు</h2>
+
+        <label>
+          <span data-i18n="agriMain">వ్యవసాయం ప్రధాన ఆదాయ వనరా?</span>
+
+          <select name="agriMain">
+            <option value="">-- Select --</option>
+            <option>Yes / అవును</option>
+            <option>No / కాదు</option>
+            <option>Not applicable / వర్తించదు</option>
+          </select>
+        </label>
+
+        <label>
+          <span data-i18n="agriIssue">ప్రధాన వ్యవసాయ సమస్య</span>
+
+          <select name="agriIssue">
+            <option value="">-- Select --</option>
+            <option>Water / నీరు</option>
+            <option>Electricity / విద్యుత్</option>
+            <option>Seeds / విత్తనాలు</option>
+            <option>Fertilizer / ఎరువులు</option>
+            <option>Crop disease / పంట తెగుళ్లు</option>
+            <option>Crop prices / పంట ధరలు</option>
+            <option>Irrigation / సాగునీరు</option>
+            <option>Other / ఇతర</option>
+          </select>
+        </label>
+
+        <label>
+          <span data-i18n="agriSupport">వ్యవసాయానికి అవసరమైన ఇతర సహాయం</span>
+          <textarea name="agriSupport" rows="4"></textarea>
+        </label>
+
+      </div>
+
+      <!-- SECTION 4 -->
+
+      <div class="survey-step hidden">
+
+        <h2 data-i18n="facilitiesTitle">4. ప్రభుత్వ మరియు ప్రజా సదుపాయాలు</h2>
+
+        <p class="hint" data-i18n="ratingHint">
+          1 = చాలా బాగోలేదు, 5 = చాలా బాగుంది.
+        </p>
+
+        <div id="ratings"></div>
+
+      </div>
+
+      <!-- SECTION 5 -->
+
+      <div class="survey-step hidden">
+
+        <h2 data-i18n="prioritiesTitle">5. అభివృద్ధి ప్రాధాన్యతలు</h2>
+
+        <p class="hint" data-i18n="top3">
+          మీకు ముఖ్యమైన మూడు అంశాల వరకు ఎంచుకోండి.
+        </p>
+
+        <div class="choices" id="priorityChoices">
+
+          <label><input type="checkbox" name="priorities" value="Roads"> Roads / రోడ్లు</label>
+
+          <label><input type="checkbox" name="priorities" value="Drinking water"> Drinking water / తాగునీరు</label>
+
+          <label><input type="checkbox" name="priorities" value="Drainage"> Drainage / డ్రైనేజీ</label>
+
+          <label><input type="checkbox" name="priorities" value="Irrigation"> Irrigation / సాగునీరు</label>
+
+          <label><input type="checkbox" name="priorities" value="Employment"> Employment / ఉపాధి</label>
+
+          <label><input type="checkbox" name="priorities" value="Schools"> Schools / పాఠశాలలు</label>
+
+          <label><input type="checkbox" name="priorities" value="Healthcare"> Healthcare / వైద్యం</label>
+
+          <label><input type="checkbox" name="priorities" value="Street lights"> Street lights / వీధి దీపాలు</label>
+
+          <label><input type="checkbox" name="priorities" value="Agriculture support"> Agriculture support / వ్యవసాయ సహాయం</label>
+
+          <label><input type="checkbox" name="priorities" value="Sanitation"> Sanitation / పారిశుధ్యం</label>
+
+          <label><input type="checkbox" name="priorities" value="Transport"> Transport / రవాణా</label>
+
+        </div>
+
+        <label>
+          <span data-i18n="firstWork">ముందుగా ఏ పని చేపట్టాలి?</span>
+          <textarea name="firstWork" rows="3"></textarea>
+        </label>
+
+        <label>
+          <span data-i18n="fiveYears">రాబోయే ఐదు సంవత్సరాల్లో మీ గ్రామం ఎలా అభివృద్ధి చెందాలి?</span>
+          <textarea name="fiveYears" rows="4"></textarea>
+        </label>
+
+      </div>
+
+      <!-- SECTION 6 -->
+
+      <div class="survey-step hidden">
+
+        <h2 data-i18n="suggestionsTitle">6. ప్రజల సూచనలు</h2>
+
+        <label>
+          <span data-i18n="urgent">గ్రామంలో వెంటనే పరిష్కరించాల్సిన సమస్య ఏమిటి?</span>
+          <textarea name="urgent" rows="3"></textarea>
+        </label>
+
+        <label>
+          <span data-i18n="benefit">గ్రామ ప్రజలందరికీ ఉపయోగపడే అభివృద్ధి పని ఏది?</span>
+          <textarea name="benefit" rows="3"></textarea>
+        </label>
+
+        <label>
+          <span data-i18n="moreSuggestions">ఇతర సూచనలు</span>
+          <textarea name="moreSuggestions" rows="4"></textarea>
+        </label>
+
+      </div>
+
+      <!-- SECTION 7 -->
+
+      <div class="survey-step hidden">
+
+        <h2 data-i18n="messageTitle">
+          7. MPTC అభ్యర్థికి సందేశం & సమీక్ష
+        </h2>
+
+        <label>
+          <span data-i18n="candidateMessage">
+            మీ గ్రామ అభివృద్ధి కోసం పోటీ చేస్తున్న MPTC అభ్యర్థికి మీ సందేశం (ఐచ్ఛికం)
+          </span>
+
+          <textarea name="candidateMessage" rows="5"></textarea>
+        </label>
+
+        <label>
+          <span data-i18n="satisfaction">గ్రామ సదుపాయాలపై మీ మొత్తం సంతృప్తి</span>
+
+          <select name="satisfaction">
+            <option value="">-- Select --</option>
+            <option>1 - Very poor</option>
+            <option>2 - Poor</option>
+            <option>3 - Average</option>
+            <option>4 - Good</option>
+            <option>5 - Very good</option>
+          </select>
+        </label>
+
+        <label>
+          <span data-i18n="sufficient">ప్రస్తుతం ఉన్న సదుపాయాలు సరిపోతున్నాయా?</span>
+
+          <select name="sufficient">
+            <option value="">-- Select --</option>
+            <option>Yes / అవును</option>
+            <option>No / కాదు</option>
+            <option>Not sure / తెలియదు</option>
+          </select>
+        </label>
+
+        <div class="privacy-note" data-i18n="reviewNote">
+          సమర్పించే ముందు మీ సమాధానాలను పరిశీలించండి.
+        </div>
+
+      </div>
+
+    </form>
+
+    <div class="form-actions">
+      <button id="backButton" class="secondary" type="button" data-i18n="back">
+        వెనక్కి
+      </button>
+
+      <button id="nextButton" class="primary" type="button" data-i18n="next">
+        తదుపరి
+      </button>
+    </div>
+
+  </section>
+
+  <!-- THANK YOU -->
+
+  <section id="thanks" class="panel hidden">
+
+    <div class="success-icon">✓</div>
+
+    <h2 data-i18n="thanksTitle">ధన్యవాదాలు!</h2>
+
+    <p data-i18n="thanksText">
+      మీ అభిప్రాయాలు గ్రామ అభివృద్ధి అవసరాలను అర్థం చేసుకోవడానికి ఉపయోగపడతాయి.
+    </p>
+
+  </section>
+
+  <footer>
+    MPTC Public Voice · Village Development Feedback
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+                                                                                                        </html>
+                                                                                                        
