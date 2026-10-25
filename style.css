@@ -353,22 +353,4 @@ footer {
     font-weight: bold;
     color: #168044;
 }
-  function showThankYouPage() {
-
-    // Hide survey form
-    document.getElementById("surveyForm").hidden = true;
-
-    // Hide all survey sections
-    document.querySelectorAll(".step").forEach(section => {
-        section.hidden = true;
-    });
-
-    // Show thank-you page
-    document.getElementById("thanks").hidden = false;
-
-    // Move page to top
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-  }
+  
