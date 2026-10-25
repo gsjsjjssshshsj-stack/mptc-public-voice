@@ -317,4 +317,40 @@ footer {
     max-width: none;
   }
     }
+.thanks-section {
+    text-align: center;
+    padding: 25px 15px;
+}
+
+.thanks-section h1 {
+    color: #168044;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.thanks-section h2 {
+    font-size: 22px;
+}
+
+.thanks-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.candidate-poster {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.candidate-poster img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+}
+
+.thanks-message {
+    font-weight: bold;
+    color: #168044;
+}
   
